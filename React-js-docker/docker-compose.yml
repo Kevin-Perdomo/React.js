@@ -1,0 +1,24 @@
+services:
+  # Define o serviço chamado 'frontend'
+  frontend:
+    # Nome do contêiner que será criado
+    container_name: frontend
+
+    # Especifica o arquivo .env que contém variáveis de ambiente para o contêiner
+    env_file:
+      - .env
+
+    # Configura a construção do contêiner
+    build:
+      # Define o contexto de construção (onde o Docker irá procurar o Dockerfile e os arquivos necessários)
+      context: .
+      # Especifica o caminho para o Dockerfile a ser usado
+      dockerfile: Dockerfile
+
+    # Mapeia a porta 5173 do host para a porta 5173 do contêiner
+    ports:
+      - '5173:5173'
+
+    # Monta um volume que sincroniza o diretório atual (do host) com o diretório /frontend no contêiner
+    volumes:
+      - .:/frontend

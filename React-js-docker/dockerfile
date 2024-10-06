@@ -1,0 +1,21 @@
+# Usar a imagem base do Node.js versão 20 em uma versão leve (Alpine)
+FROM node:20-alpine
+
+# Define o diretório de trabalho dentro do contêiner como /frontend
+WORKDIR /frontend
+
+# Copia os arquivos package.json e package-lock.json para o diretório de trabalho no contêiner
+COPY package*.json ./
+
+# Executa o comando npm install para instalar as dependências listadas no package.json
+RUN npm install
+
+# Copia todos os arquivos e diretórios do diretório atual (do host) para o diretório de trabalho no contêiner
+COPY . .
+
+# Expõe a porta 5173 do contêiner para ser acessível do exterior
+EXPOSE 5173
+
+# Define o comando padrão a ser executado quando o contêiner é iniciado
+# Este comando irá instalar as dependências novamente e, em seguida, iniciar o servidor de desenvolvimento
+CMD ["sh", "-c", "npm install && npm run dev"]
