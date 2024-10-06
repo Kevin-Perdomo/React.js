@@ -49,7 +49,7 @@ Ctrl + c
 
 ## 2. Dockerizando o Projeto
 
-### 1.1. Crie na raiz do projeto:
+### 2.1. Crie na raiz do projeto:
  - `dockerfile`
  - `docker compose`
  - `.env.exemple`
@@ -58,32 +58,32 @@ Ctrl + c
 cp .env.example .env
 ```
 
-### 1.2. Adicione o arquivo .env ao .gitignore para que ele não seja versionado no Git. No arquivo .gitignore, adicione no final do arquivo:
+### 2.2. Adicione o arquivo .env ao .gitignore para que ele não seja versionado no Git. No arquivo .gitignore, adicione no final do arquivo:
 ```bash
 # env
 .env
 ```
 
-### 1.3. Abra o arquivo package.json e altere a linha do script dev para expor o host, garantindo que o Vite funcione dentro do Docker:
+### 2.3. Abra o arquivo package.json e altere a linha do script dev para expor o host, garantindo que o Vite funcione dentro do Docker:
 ```bash
   "scripts": {
     "dev": "vite --host"
   }
 ```
 
-### 1.4. Construir a Imagem Docker
+### 2.4. Construir a Imagem Docker
 Execute o seguinte comando para construir a imagem Docker da aplicação:
 ```bash
 docker compose build
 ```
-### 1.5. Rodar o Contêiner
+### 2.5. Rodar o Contêiner
 Depois que a imagem for construída, você pode iniciar o contêiner com o comando:
 ```bash
 docker compose up
 ```
 A aplicação será iniciada e estará acessível em http://localhost:5173.
 
-### 1.6. Parando o Contêiner
+### 2.6. Parando o Contêiner
 Para parar o contêiner, basta usar o comando:
 ```bash
 docker compose stop
