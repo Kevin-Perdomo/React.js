@@ -19,10 +19,14 @@ cd react-js-docker
 
 ### 1.2. Use o comando `npx` para criar um projeto Vite.
 ```bash
+npx create-vite .
+```
+
  - Ao ser solicitado, selecione:
 
- - Framework: React
- - Variant: JavaScript
+```bash
+ ➜  Framework: React
+ ➜  Variant: JavaScript
 ```
  
 ### 1.3. Instale as dependências do projeto com o seguinte comando:
