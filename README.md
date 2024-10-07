@@ -4,7 +4,7 @@
 
 ## Tecnologias Usadas
 
-- [React](https://reactjs.org/) - Biblioteca JavaScript para construção de interfaces de usuário.
+- [React](https://reactjs.org/) - Biblioteca JavaScript para construção de interfaces de usuário em páginas web.
 - [Vite](https://vitejs.dev/) - Ferramenta de construção e desenvolvimento.
 - [Node.js](https://nodejs.org/) - Ambiente de execução para JavaScript no servidor.
 
